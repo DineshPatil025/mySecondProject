@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <p>This button will show and hide the lists blow and this will be active after <span class="text-danger text-bold">5 seconds</span></p>
+            <button class="btn btn-warning mr-4 " (click)="onBtnAct()" >Enable/Disable Toggle List</button>
+            <button class="btn btn-success " [disabled]="!isBtnDisable" (click)="onTOggle()" >Toggle List</button>
+
+        </div>
+    </div>
+    <div class="row" *ngIf="showList">
+        <div class="col-md-3">
+            <h3 class="text-capitalize text-center">product list</h3>
+            <ul class="list-grooup">
+                <li class="list-group-item text-capitalize" *ngFor="let product of products; index as i">
+                    {{i+1}}. {{product}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3 class="text-capitalize text-center">list item</h3>
+            <ul class="list-grooup">
+                <li class="list-group-item text-capitalize" *ngFor="let item of items; index as i">
+                    {{i+1}}. {{item}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3 class="text-capitalize text-center">skill list</h3>
+            <ul class="list-grooup">
+                <li class="list-group-item text-capitalize" *ngFor="let skill of skills; index as i">
+                    {{i+1}}. {{skill}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3 class="text-capitalize text-center">grocery list</h3>
+            <ul class="list-grooup">
+                <li class="list-group-item text-capitalize"  *ngFor="let grocery of groceries; index as i">
+                    {{i+1}}. {{grocery}}
+                </li>
+            </ul>
+        </div>
+        
+    
+    </div>
+</div>
