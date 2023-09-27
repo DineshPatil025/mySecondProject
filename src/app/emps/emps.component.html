@@ -1,4 +1,16 @@
 <div class="container py-4  mt-2">
+
+    <div class="row">
+        
+        
+        <div class="col-md-12">
+            <h3 class="bg-success text-danger text-uppercase py-2 text-center">showing text from input control to paragraph </h3>
+
+            <!-- <button class="btn btn-primary">show text</button> -->
+            <input type="text" placeholder="enter text to display in paragraph" (keyup)="onSearchKeyUp($event)" class="form-control mb-4">
+            <p class="alert-info" [innerHTML]="searcTextValue">hello</p>
+        </div>
+    </div>
     <div class="row text-center text-capitalize">
         <div class="col-md-12">
             <h3 class="bg-success text-white py-2">this is employee details table section</h3>
@@ -30,15 +42,5 @@
         </div>
     </div>
 
-    <div class="row">
-        
-        
-        <div class="col-md-12">
-            <h3 class="bg-success text-white py-2 text-center">showing text from input control to paragraph </h3>
-
-            <!-- <button class="btn btn-primary">show text</button> -->
-            <input type="text" placeholder="enter text to display in paragraph" (keyup)="onSearchKeyUp($event)" class="form-control mb-4">
-            <p class="alert-info" [innerHTML]="searcTextValue">hello</p>
-        </div>
-    </div>
+    
 </div>
